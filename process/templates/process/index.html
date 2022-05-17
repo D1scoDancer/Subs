@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet"  type="text/css" href="{% static "process/css/style.css" %}">
+{% endblock %}
+    
+{% block content %}
+<div class='uploader-page'>
+    <form action="{% url "index" %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    <div class="tool__header">
+        <h2 class="tool__header__title">Переводите ваши субтитры</h2>
+        <h3 class="tool__header__sub">Получите список самых сложных слов из фильма</h3>
+    </div>
+            
+    <div class='uploader'>
+        <p>Выберите srt файл</p>
+        <div class='a123'>{{ form.docfile }}</div>
+        <input id='submit' class='submit' type="submit" value="Перевести" onclick='show_loader()'/>
+    </div>
+    </form>
+    <div class='loader-father'>
+        <div id='loader-text'> 
+            <p>
+                Приблизительное время ожидания: 1 минута
+            </p>
+        </div>
+        <div id='loader' class="loader"></div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("id_docfile").setAttribute('accept', '.srt');
+
+    function show_loader() {
+        input =  document.getElementById("id_docfile").value
+        if(input) {
+            document.getElementById("loader").style.display = 'inline-block';
+            document.getElementById("loader-text").style.display = 'block';
+        } 
+    }
+</script>
+
+{% endblock %} 

@@ -1,0 +1,24 @@
+body {
+    background-color: #f3f0ec;
+    color: #161616;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+footer {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Height of the footer*/ 
+}
+
+.foot-container p{
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.body-page {
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+}

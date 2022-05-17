@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extrahead %}
+    <link rel="stylesheet"  type="text/css" href="{% static "process/css/style.css" %}">
+    
+{% endblock %}
+
+{% block content %}
+     <div class='uploader-page'>
+        <h4 class="tool__header__sub">Нажмите на иконку, чтобы скачать</h4>
+        <a href=download>
+            <img src='..\..\static\excel.png' width="200" height="200">
+        </a>
+    </div>
+{% endblock %} 

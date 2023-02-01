@@ -1,2 +1,2 @@
 # Subs
-Веб-сервис обработки субтитров на Django
+Django Subtitle Processing Web Service
